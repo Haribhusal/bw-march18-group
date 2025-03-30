@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Audio</title>
+</head>
+<body>
+
+  <!-- <audio id="myAudio"  src="./dusman.mp3" controls></audio> -->
+
+  <audio controls>
+    <source src="./dusman.mp3" type="audio/ogg">
+    <source src="./dusman.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <button id="playAudio">Play this song</button>
+  <button id="pauseAudio">Pause this song</button>
+
+  <!-- <script>
+    const audioElement = document.querySelector('audio');
+    const playButton = document.querySelector('button:first-child');
+    const pauseButton = document.querySelector('button:last-child');
+
+    playButton.addEventListener('click', () => {
+      audioElement.play();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      audioElement.pause();
+    });
+  </script> -->
+
+  <script>
+
+    let dusmanSong = document.getElementById('myAudio');
+    let playDusmanSong = document.getElementById('playAudio');
+    let pauseDusmanSong = document.getElementById('pauseAudio');
+
+    playDusmanSong.addEventListener('click', ()=>{
+      dusmanSong.play();
+    })
+
+     pauseDusmanSong.addEventListener('click', () => {
+        dusmanSong.pause();
+      })
+
+  </script>
+
+</body>
+</html>

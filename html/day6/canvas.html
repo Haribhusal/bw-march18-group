@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+  <canvas id="myCanvasForCircle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+  <h1>Hello</h1>
+
+  
+
+
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(100, 100);
+    ctx.stroke();
+  </script>
+
+
+<script>
+  var c = document.getElementById("myCanvasForCircle");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(60, 40, 30, 1.57, 2 * Math.PI);
+  ctx.stroke();
+</script>
+
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.strokeText("Hello World", 10, 50);
+</script>
+  
+</body>
+</html>

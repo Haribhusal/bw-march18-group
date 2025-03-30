@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 5 Video</title>
+</head>
+<body>
+
+  <video width="320" height="240" controls id="bunnyVideo">
+    <source src="./my-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <button id="play">Play</button>
+  <button id="pause">Pause</button>
+
+
+  <script>
+
+    let bunnyVideo = document.getElementById('bunnyVideo');
+    let play = document.getElementById('play');
+    let pause = document.getElementById('pause');
+
+    play.addEventListener('click', () => {
+      bunnyVideo.play();
+    })
+
+    pause.addEventListener('click', () => {
+      bunnyVideo.pause();
+    })
+
+  </script>
+  
+</body>
+</html>

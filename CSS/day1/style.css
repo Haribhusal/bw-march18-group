@@ -1,0 +1,37 @@
+
+    /* Internal CSS */
+    /* asdadsasd
+    dadsabdsaskbd basdkbsa
+    asdabsd
+    */
+
+    h1{
+      color: blue;
+      font-size: 48px;
+      margin: 0px;
+    }
+    /* h1 => Selector */
+    /* color, font-size, text-decoration => Property */
+    /* red, 90px, underline => Values */
+    /* color: red  => Style */
+    /* We terminate each style with ; */
+
+    p{
+      color: blue;
+      font-size: 20px;
+    }
+
+    button{
+      background-color: blue;
+      padding: 20px;
+      border: none;
+      color: white;
+      border-radius: 30px;
+    }
+    div{
+      background-color: orange;
+      border: 10px solid black;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      padding: 30px;
+    }
