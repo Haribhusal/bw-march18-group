@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTL and LTR Text Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .ltr-text {
+      direction: ltr;
+      text-align: left;
+      background-color: #f0f8ff;
+    }
+
+    .rtl-text {
+      direction: rtl;
+      text-align: right;
+      background-color: #fff0f5;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container ltr-text">
+    <h2>Left-to-Right Text (LTR)</h2>
+    <div class="label">English Example:</div>
+    <p>This is an English paragraph written in LTR direction. The text flows from left to right as is typical for most
+      Western languages. Punctuation and spacing follow standard English conventions.</p>
+  </div>
+
+  <div class="container rtl-text">
+    <h2>Right-to-Left Text (RTL)</h2>
+    <div class="label">Arabic Example:</div>
+    <p>هذا نص باللغة العربية مكتوب باتجاه اليمين إلى اليسار. يتدفق النص من اليمين إلى اليسار كما هو معتاد في اللغات
+      السامية مثل العربية والعبرية. علامات الترقيم تتبع التقاليد العربية.</p>
+  </div>
+
+  <div class="container ltr-text">
+    <h2>Mixed Content (LTR Base)</h2>
+    <div class="label">English with Arabic:</div>
+    <p>This is English text containing some Arabic words like مرحبا (hello) and شكرا (thank you). The base direction
+      remains LTR, but the Arabic words are rendered RTL within the flow.</p>
+  </div>
+</body>
+
+</html>

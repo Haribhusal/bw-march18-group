@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Direction Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .ltr-text {
+      direction: ltr;
+      text-align: left;
+      background-color: #f0f8ff;
+    }
+
+    .rtl-simulated {
+      direction: ltr;
+      /* Keeping ltr direction but reversing text order */
+      text-align: left;
+      background-color: #fff0f5;
+      unicode-bidi: bidi-override;
+      /* Forces text to render in specified order */
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container ltr-text">
+    <h2>Original LTR Text</h2>
+    <div class="label">English Example:</div>
+    <p>this is a code</p>
+  </div>
+
+  <div class="container rtl-simulated">
+    <h2>Simulated RTL (Reversed) Text</h2>
+    <div class="label">English Reversed to Simulate RTL:</div>
+    <p>edoc a si siht</p>
+  </div>
+
+  <div class="container ltr-text">
+    <h2>Explanation</h2>
+    <p>In true RTL languages like Arabic, characters are written and read from right to left. Here, I've manually
+      reversed the English text "this is a code" to "edoc a si siht" to demonstrate how the word order would appear in
+      an RTL context, though in real RTL languages, the characters themselves would also be different.</p>
+  </div>
+</body>
+
+</html>
