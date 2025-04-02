@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Align Middle Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #f0f0f0;
+      /* Helps with vertical alignment context */
+    }
+
+    .text {
+      line-height: 100px;
+
+      font-size: 24px;
+      background-color: red;
+      vertical-align: middle;
+    }
+
+    img {
+      /* Aligns image vertically with text */
+      margin-right: 10px;
+      /* Optional: space between image and text */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://picsum.photos/id/23/100/100" alt="Sample Image">
+    <span class="text">This text is vertically aligned with the image</span>
+  </div>
+</body>
+
+</html>

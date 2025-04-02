@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .parent {
+      /* position: relative; */
+      background-color: red;
+      /* padding: 10px; */
+      height: 200px;
+      /* background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('https://picsum.photos/id/34/200'); */
+    }
+
+    /* 
+    .parent button {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+
+    } */
+
+    .parent .child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: blue;
+      color: white;
+      height: 100px;
+      width: 100px;
+      transform: translate(-50%, -50%);
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="parent">
+    <!-- <button>this is button</button> -->
+    <div class="child"></div>
+  </div>
+
+</body>
+
+</html>

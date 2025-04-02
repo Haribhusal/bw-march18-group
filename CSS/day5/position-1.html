@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Relative and Absolute Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    /* Common container styling */
+    .container {
+      width: 400px;
+      height: 200px;
+      border: 2px solid #333;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+      position: relative;
+      /* Needed for absolute positioning context */
+    }
+
+    .text {
+      margin: 0;
+      font-size: 20px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Example 1: Position Relative */
+    .relative-example .text {
+      position: relative;
+      top: 30px;
+      /* Moves 50px down from its normal position */
+      left: 30px;
+
+      /* Moves 20px right from its normal position */
+      border: 1px solid blue;
+    }
+
+    /* Example 2: Position Absolute - Top Left */
+    .absolute-top-left .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid red;
+    }
+
+    /* Example 3: Position Absolute - Centered */
+    .absolute-center .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Centers perfectly */
+      border: 1px solid green;
+    }
+
+    /* Example 4: Position Absolute - Bottom Right */
+    .absolute-bottom-right .text {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border: 1px solid purple;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Position: Relative Example</h2>
+  <div class="container relative-example">
+    <p class="text">Relative: Offset 50px down, 20px right</p>
+  </div>
+
+  <h2>Position: Absolute Examples</h2>
+  <div class="container absolute-top-left">
+    <p class="text">Absolute: Top Left Corner</p>
+  </div>
+
+  <div class="container absolute-center">
+    <p class="text">Absolute: Centered Vertically & Horizontally</p>
+  </div>
+
+  <div class="container absolute-bottom-right">
+    <p class="text">Absolute: Bottom Right Corner</p>
+  </div>
+</body>
+
+</html>
