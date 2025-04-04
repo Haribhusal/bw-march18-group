@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float and Clear Example</title>
+  <style>
+    .container {
+      width: 600px;
+      border: 2px solid black;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .float-left {
+      float: left;
+      background-color: red;
+    }
+
+    .float-right {
+      float: right;
+      background-color: blue;
+    }
+
+    .float-none {
+      float: none;
+      background-color: green;
+    }
+
+    .clear-left {
+      clear: left;
+      background-color: orange;
+    }
+
+    .clear-right {
+      clear: right;
+      background-color: purple;
+    }
+
+    .clear-both {
+      clear: both;
+      background-color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box float-left">Left</div>
+    <div class="box float-right">Right</div>
+    <div class="box float-none">None</div>
+    <div class="box clear-left">Clear Left</div>
+    <div class="box clear-right">Clear Right</div>
+    <div class="box clear-both">Clear Both</div>
+  </div>
+</body>
+
+</html>

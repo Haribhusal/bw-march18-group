@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Run-in Example</title>
+  <style>
+    .run-in {
+      display: run-in;
+      font-weight: bold;
+      color: #ff5733;
+    }
+
+    .block {
+      display: block;
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <span>This paragraph follows the run-in element, so the heading should be inline with it.</span>
+  <span class="run-in">This is a run-in heading.</span>
+  <span>This paragraph follows the run-in element, so the heading should be inline with it.</span>
+  <span class="run-in">Another run-in element</span>
+  <span class="block">This is a block element, so the run-in behaves as a block.</span>
+</body>
+
+</html>

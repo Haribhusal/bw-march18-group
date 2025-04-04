@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear Example</title>
+  <style>
+    .container {
+      width: 600px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .left {
+      background-color: blue;
+      float: left;
+    }
+
+    .right {
+      background-color: red;
+      float: right;
+    }
+
+    .clear-left {
+      background-color: green;
+      clear: left;
+    }
+
+    .clear-right {
+      background-color: orange;
+      clear: right;
+    }
+
+    .clear-both {
+      background-color: purple;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box left">Float Left</div>
+    <div class="box right">Float Right</div>
+    <div class="box clear-left">Clear Left</div>
+    <div class="box clear-right">Clear Right</div>
+    <div class="box clear-both">Clear Both</div>
+  </div>
+</body>
+
+</html>

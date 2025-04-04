@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .example {
+      border: 1px solid #000;
+      margin: 5px;
+      padding: 5px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>CSS Display Properties Examples</h2>
+
+  <!-- display: inline -->
+  <div>
+    <!-- <span class="example" style="display: inline;">Inline 1</span> -->
+    <!-- <span class="example" style="display: inline;">Inline 2</span> -->
+    <!-- <span class="example" style="display: inline;">Inline 3</span> -->
+    <!-- Elements stay on same line, no width/height control -->
+  </div>
+
+  <!-- display: block -->
+  <div>
+    <!-- <div class="example" style="display: block;">Block 1</div> -->
+    <!-- <div class="example" style="display: block;">Block 2</div> -->
+    <!-- <div class="example" style="display: block;">Block 3</div> -->
+    <!-- Elements take full width, stack vertically -->
+  </div>
+
+  <!-- display: inline-block -->
+  <div>
+    <!-- <span class="example" style="display: inline-block; width: 150px; height: 100px;">Inline-block 1</span> -->
+    <!-- <span class="example" style="display: inline-block; width: 100px; height: 50px;">Inline-block 2</span> -->
+    <!-- Inline but respects width/height -->
+  </div>
+
+  <!-- display: flex -->
+  <!-- <div class="example" style="display: flex; flex-direction: column;  justify-content: center;"> -->
+  <!-- <div class="example">Flex 1</div> -->
+  <!-- <div class="example">Flex 2</div> -->
+  <!-- <div class="example">Flex 3</div> -->
+  <!-- Creates flexible box layout -->
+  <!-- </div> -->
+
+  <!-- display: contents -->
+  <!-- <div class="example">
+    <div style="display: contents;">
+      <span class="example">Contents 1</span>
+      <span class="example">Contents 2</span>
+    </div>
+    Container disappears, children remain
+  </div> -->
+
+  <!-- display: inline-flex -->
+  <!-- <span class="example" style="display: inline-flex;"> -->
+  <!-- <div class="example">Inline-flex 1</div> -->
+  <!-- <div class="example">Inline-flex 2</div> -->
+  <!-- </span> -->
+  <!-- Flex container stays inline -->
+
+  <!-- display: grid -->
+  <!-- <div class="example" style="display: grid; grid-template-columns: 1fr 1fr"> -->
+  <!-- <div class="example">Grid 1</div> -->
+  <!-- <div class="example">Grid 2</div> -->
+  <!-- <div class="example">Grid 3</div> -->
+  <!-- Creates grid layout -->
+  <!-- </div> -->
+
+  <!-- display: inline-grid -->
+  <!-- <span class="example" style="display: inline-grid; grid-template-columns: 1fr 1fr;"> -->
+  <!-- <div class="example">Inline-grid 1</div> -->
+  <!-- <div class="example">Inline-grid 2</div> -->
+  <!-- </span> -->
+  <!-- Grid that stays inline -->
+
+  <!-- display: table -->
+  <!-- <div class="example" style="display: table;"> -->
+  <!-- table -->
+  <!-- <div style="display: table-row;"> -->
+  <!-- tr -->
+  <!-- <div style="display: table-cell;">Table 1</div> -->
+  <!-- td -->
+  <!-- <div style="display: table-cell;">Table2</div> -->
+  <!-- td -->
+  <!-- <div style="display: table-cell;">Table 3</div> -->
+  <!-- td -->
+
+  <!-- </div> -->
+  <!-- <div style="display: table-row;"> -->
+  <!-- <div style="display: table-cell;">Table 1</div> -->
+  <!-- <div style="display: table-cell;">Table 2</div> -->
+  <!-- </div> -->
+  <!-- <div style="display: table-row;"> -->
+  <!-- <div style="display: table-cell;">Table 1</div> -->
+  <!-- <div style="display: table-cell;">Table 2</div> -->
+  <!-- </div> -->
+  <!-- <div style="display: table-row;"> -->
+  <!-- <div style="display: table-cell;">Table 1</div> -->
+  <!-- <div style="display: table-cell;">Table 2</div> -->
+  <!-- </div> -->
+  <!-- Mimics HTML table structure -->
+  <!-- </div> -->
+
+  <!-- display: inline-table -->
+  <!-- <span class="example" style="display: inline-table;"> -->
+  <!-- <div style="display: table-row;"> -->
+  <!-- <div style="display: table-cell;">Inline-table 1</div> -->
+  <!-- <div style="display: table-cell;">Inline-table 2</div> -->
+  <!-- </div> -->
+  <!-- </span> -->
+  <!-- Table that stays inline -->
+
+  <!-- display: list-item -->
+  <!-- <div> -->
+  <!-- <div class="example" style="display: list-item; list-style-type: lower-alpha;">List-item 1</div> -->
+  <!-- <div class="example" style="display: list-item; list-style-type: upper-alpha;">List-item 2</div> -->
+  <!-- <div class="example" style="display: list-item; list-style-type: lower-alpha;">List-item 3</div> -->
+  <!-- Adds list bullet -->
+  <!-- </div> -->
+
+  <!-- display: none -->
+  <!-- <div> -->
+  <!-- <div class="example">Visible</div> -->
+  <!-- <div class="example" style="display: none;">Hidden</div> -->
+  <!-- Completely removes element -->
+  <!-- </div> -->
+
+  <!-- display: run-in -->
+  <div>
+    <div class="example" style="display: run-in;">Run-in</div>
+    <span class="example">Following text</span>
+    <!-- Runs into next element (limited support) -->
+    <p class="example">Hello</p>
+  </div>
+
+</body>
+
+</html>
