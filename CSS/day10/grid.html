@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      height: 100vh;
+      background-color: yellow;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+    }
+
+    .container div:nth-child(1) {
+      grid-row: 1/3;
+      grid-column: 1/11;
+      background-color: white;
+    }
+
+    .container div:nth-child(2) {
+      grid-row: 3/9;
+      grid-column: 1/5;
+      background-color: black;
+    }
+
+    .container div:nth-child(3) {
+      grid-row: 3/9;
+      grid-column: 5/11;
+      background-color: red;
+    }
+
+    .container div:nth-child(4) {
+      grid-row: 9/11;
+      grid-column: 1/11;
+      background-color: aqua;
+    }
+
+    /* .popup {
+      grid-row: 4/8;
+      background-color: blue;
+      border-radius: 20px;
+      grid-column: 4/8;
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>Header</div>
+    <div>Sidebar</div>
+    <div>Main</div>
+    <div>Footer</div>
+    <!-- <div class="popup"></div> -->
+  </div>
+
+</body>
+
+</html>

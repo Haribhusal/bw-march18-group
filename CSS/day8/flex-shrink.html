@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      display: flex;
+      width: 600px;
+      /* Fixed width to force shrinking */
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    .box {
+      height: 100px;
+      flex-basis: 300px;
+      /* Initial size before shrinking */
+    }
+
+    .box1 {
+      background-color: lightblue;
+      flex-shrink: 1;
+      /* Default value - will shrink normally */
+    }
+
+    .box2 {
+      background-color: lightgreen;
+      flex-shrink: 2;
+      /* Shrinks twice as much as box1 */
+    }
+
+    .box3 {
+      background-color: lightpink;
+      flex-shrink: 0;
+      /* Won't shrink at all */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">Box 1 (flex-shrink: 1)</div>
+    <div class="box box2">Box 2 (flex-shrink: 2)</div>
+    <div class="box box3">Box 3 (flex-shrink: 0)</div>
+  </div>
+</body>
+
+</html>
