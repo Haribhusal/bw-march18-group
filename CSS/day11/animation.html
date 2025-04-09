@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      position: relative;
+      background-color: yellow;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      background-color: red;
+      position: absolute;
+      transition: all 0.5s ease;
+
+
+      animation: moveMyRedBox 2s ease infinite alternate;
+    }
+
+    @keyframes moveMyRedBox {
+      0% {
+        left: 0;
+        top: 0;
+      }
+
+      25% {
+        right: 0;
+        top: 0;
+      }
+
+      50% {
+        right: 0;
+        bottom: 0;
+      }
+
+      75% {
+        left: 0;
+        bottom: 0;
+      }
+
+      /* from {
+        left: 0;
+        top: 0;
+      }
+
+      to {
+        right: 0;
+        bottom: 0;
+        background-color: green;
+        border-radius: 100%;
+      } */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+
+</body>
+
+</html>

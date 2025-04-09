@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* transition: width 5s; */
+      transition: width 0.2s ease-in-out;
+      transition-delay: 1s;
+      /* Here first value is transition property */
+      /* Second value is Transtion duration */
+      /* Third value is Transition timing function */
+    }
+
+    .box:hover {
+      width: 300px;
+    }
+
+    .secondbox {
+      width: 300px;
+      background-color: yellow;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+  <div class="secondbox"></div>
+</body>
+
+</html>
