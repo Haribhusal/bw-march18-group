@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      animation: testAnim 1s ease infinite;
+      height: 100px;
+      width: 100px;
+
+      background-color: aqua;
+      animation-fill-mode: forwards;
+      /* animation-direction: reverse; */
+      /* 
+      animation-name: example;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; */
+    }
+
+    @keyframes testAnim {
+      from {
+        /* background-color: blue; */
+      }
+
+      to {
+        transform: translateX(100px);
+        background-color: orange;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+</body>
+
+</html>

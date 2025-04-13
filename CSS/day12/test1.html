@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Fill Mode: Spot the Difference</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 20px;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* Animation keyframes */
+    @keyframes scaleAndColor {
+      0% {
+        transform: scale(1);
+        background-color: #3498db;
+      }
+
+      100% {
+        transform: scale(1.5);
+        background-color: #e74c3c;
+      }
+    }
+
+    /* Circle with animation-fill-mode: both */
+    .with-fill-mode {
+      animation: scaleAndColor 2s ease-in-out 2s;
+      animation-fill-mode: both;
+      animation-iteration-count: 2;
+    }
+
+    /* Circle without animation-fill-mode */
+    .without-fill-mode {
+      animation: scaleAndColor 2s ease-in-out 2s;
+      /* No animation-fill-mode specified (defaults to none) */
+    }
+
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    .description {
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Spot the Difference: Animation Fill Mode</h1>
+  <p>Compare two circles. Both have a 2-second delay before a 2-second animation that scales and changes color. One uses
+    <code>animation-fill-mode: both</code>, and the other does not.
+  </p>
+  <div class="container">
+    <div class="circle with-fill-mode">With Fill Mode</div>
+    <div class="circle without-fill-mode">Without Fill Mode</div>
+  </div>
+  <button onclick="restartAnimations()">Restart Animations</button>
+  <div class="description">
+    <h3>What's Happening?</h3>
+    <p><strong>With Fill Mode (both):</strong> During the 2-second delay, the circle applies the first keyframe’s styles
+      (scale 1, blue). After the animation, it retains the final keyframe’s styles (scale 1.5, red).</p>
+    <p><strong>Without Fill Mode:</strong> During the delay, the circle remains in its default state (scale 1, blue, as
+      per CSS). After the animation, it reverts to its default state.</p>
+    <p>Watch the circles before and after the animation to spot the difference!</p>
+  </div>
+
+  <script>
+    function restartAnimations() {
+      const circles = document.querySelectorAll('.circle');
+      circles.forEach(circle => {
+        circle.style.animation = 'none';
+        void circle.offsetWidth; // Trigger reflow
+        circle.style.animation = null;
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: green;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.subtitle {
+    border: 1px solid gray;
+    padding: 5px 20px;
+    border-radius: 6px;
+    display: inline-block;
+
+}
+
+.title-secondary {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.section-heading {
+    color: green;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 30px;
+    gap: 15px;
+}
+
+header {
+    padding: 10px 0;
+}
+
+header .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid green;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.banner {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.banner .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.banner .content .title {
+    font-size: 72px;
+}
+
+
+.about {
+    padding: 32px 0;
+}
+
+.skills-section {
+    background-color: rgba(0, 200, 0, 0.1);
+    padding: 32px 0;
+}
+
+.skills-section .container {
+    flex-direction: column;
+}
+
+.skills-section .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skills-section .skills .skill {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.work-section {
+    padding: 32px 0;
+}
+
+.work-section .container {
+    flex-direction: column;
+
+}
+
+
+.work-section .works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .work-section .works {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .work-section .works {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+
+
+.work-section .works .work {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 200, 0, 0.2);
+}
+
+.work-section .work a:hover {
+    color: #333;
+}
+
+.work-section .work-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.work-section .work-details ul {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+
+
+.work-section .work-details ul li {
+    border: 1px solid green;
+    font-size: smaller;
+    padding: 3px 8px;
+}
+
+.work-section .work:hover .work-details h3 {
+    color: green;
+}

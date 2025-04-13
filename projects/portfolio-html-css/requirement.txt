@@ -1,0 +1,9 @@
+Header
+Big image of yourself
+About me
+Skills
+My works
+Blog
+Contact me
+Footer
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Print CSS Example</title>
+  <link rel="stylesheet" href="./print.css">
+
+</head>
+
+<body>
+  <header>Website Header (won't print)</header>
+  <nav>Navigation Menu (won't print)</nav>
+  <main>
+    <h1>Main Title</h1>
+    <p>This is the main content that will print nicely.</p>
+    <p>Visit <a href="https://example.com">Example</a> for more info.</p>
+    <img src="example.jpg" alt="Sample Image">
+    <table>
+      <tr>
+        <th>Header</th>
+        <th>Data</th>
+      </tr>
+      <tr>
+        <td>Row 1</td>
+        <td>Data 1</td>
+      </tr>
+    </table>
+    <p class="no-print">This won't print.</p>
+    <p class="print-only">This only appears in print.</p>
+    <div class="new-page">
+      <h2>New Section</h2>
+      <p>This starts on a new page.</p>
+    </div>
+  </main>
+  <footer>Footer (won't print)</footer>
+</body>
+
+</html>

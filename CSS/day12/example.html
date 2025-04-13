@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Fill Mode Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* Animation keyframes */
+    @keyframes moveAndColor {
+      0% {
+        background-color: lightblue;
+        left: 0;
+      }
+
+      100% {
+        background-color: coral;
+        left: 200px;
+      }
+    }
+
+    /* Animation with different fill modes */
+    .none {
+      animation: moveAndColor 2s ease-in-out 1s;
+      animation-fill-mode: none;
+    }
+
+    .forwards {
+      animation: moveAndColor 2s ease-in-out 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .backwards {
+      animation: moveAndColor 2s ease-in-out 1s;
+      animation-fill-mode: backwards;
+    }
+
+    .both {
+      animation: moveAndColor 2s ease-in-out 1s;
+      animation-fill-mode: both;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Animation Fill Mode Demo</h1>
+  <p>Each box demonstrates a different <code>animation-fill-mode</code> value. The animation has a 1-second delay, lasts
+    2 seconds, and moves the box while changing its color.</p>
+  <div class="container">
+    <div class="box none">none</div>
+    <div class="box forwards">forwards</div>
+    <div class="box backwards">backwards</div>
+    <div class="box both">both</div>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
