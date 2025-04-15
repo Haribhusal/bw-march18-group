@@ -68,10 +68,63 @@ body {
 
 header {
     padding: 10px 0;
+    position: relative;
+}
+
+header .mobileMenu {
+    position: fixed;
+    padding: 30px 15px;
+    width: 100vw;
+    bottom: 0;
+    top: 70px;
+    background-color: green;
+    height: 90vh;
+    display: none;
+}
+
+header .active {
+    display: block;
+}
+
+header .mobileMenu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header .mobileMenu nav a {
+    color: white;
+    background-color: darkgreen;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
 }
 
 header .container {
     justify-content: space-between;
+    align-items: center;
+}
+
+header .action {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width:768px) {
+    header .action .toggle {
+        display: none;
+    }
+}
+
+header .toggle img {
+    height: 30px;
+}
+
+header .toggle {
+    display: flex;
     align-items: center;
 }
 
@@ -88,11 +141,18 @@ header .logo img {
     border: 2px solid green;
 }
 
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+header .menu {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    header .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
 }
 
 .banner {
@@ -138,10 +198,24 @@ header nav {
     gap: 15px;
 }
 
+@media screen and (max-width:992px) {
+    .skills-section .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .skills-section .skills {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .skills-section .skills .skill {
     background-color: white;
     padding: 15px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .work-section {
@@ -203,7 +277,7 @@ header nav {
 
 
 
-.work-section .work-details ul li {
+.work-section .work-details li {
     border: 1px solid green;
     font-size: smaller;
     padding: 3px 8px;
@@ -211,4 +285,91 @@ header nav {
 
 .work-section .work:hover .work-details h3 {
     color: green;
+}
+
+/*  blog-section design */
+.blog-section .blogs .blog {
+    background-color: green;
+
+}
+
+.blog-section a {
+    color: white;
+}
+
+.blog-section .blog:hover a {
+    color: white;
+}
+
+.blog-section .blog:hover .work-details h3 {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-section {
+    padding: 32px 0;
+}
+
+
+
+.contact-section form {
+    background-color: rgba(0, 200, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.contact-section .form-item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-section .contact-form,
+.contact-section .contact {
+    flex-grow: 1;
+}
+
+input,
+textarea {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+}
+
+.contact-section label {
+    font-size: small;
+}
+
+@media screen and (max-width:678px) {
+    .contact-section .container {
+        flex-direction: column;
+    }
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 16px 0;
+}
+
+footer a {
+    color: white;
+}
+
+footer .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container {
+    justify-content: space-between;
+}
+
+footer .socialLinks {
+    text-align: right;
 }

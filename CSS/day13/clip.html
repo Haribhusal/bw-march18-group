@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path Example</title>
+    <style>
+        .clip-circle {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            background-image: url('https://picsum.photos/id/1/300/300');
+            clip-path: circle(50%);
+            /* Circular clip */
+            margin: 20px;
+        }
+
+        .clip-ellipse {
+            width: 300px;
+            height: 150px;
+            background-color: lightcoral;
+            clip-path: ellipse(10% 90% at 10% 40%);
+            background-image: url('https://picsum.photos/id/1/300/300');
+
+            /* Elliptical clip */
+            margin: 20px;
+        }
+
+        .clip-inset {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            clip-path: inset(10% 20% 30% 40%);
+            background-image: url('https://picsum.photos/id/1/300/300');
+
+            /* Inset clip */
+            margin: 20px;
+        }
+
+        .clip-polygon {
+            width: 200px;
+            height: 200px;
+            background-color: lightyellow;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            background-image: url('https://picsum.photos/id/1/300/300');
+            /* Triangular clip */
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clip-circle"></div>
+    <div class="clip-ellipse"></div>
+    <div class="clip-inset"></div>
+    <div class="clip-polygon"></div>
+</body>
+
+</html>

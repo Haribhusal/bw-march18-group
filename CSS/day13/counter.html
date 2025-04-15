@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Define a counter */
+        .counter {
+            counter-reset: topic;
+            /* Initialize the counter */
+        }
+
+        .counter h2 {
+            counter-increment: topic;
+            /* Increment the counter */
+            margin: 10px 0;
+        }
+
+        .counter h2::before {
+            content: "Topic " counter(topic) ": ";
+            /* Display the counter */
+            font-weight: bold;
+        }
+
+        /* Nested counters */
+        .nested-counter {
+            counter-reset: subtopic;
+            /* Initialize the nested counter */
+        }
+
+        .nested-counter li {
+            counter-increment: subtopic;
+            /* Increment the nested counter */
+            margin: 5px 0;
+        }
+
+        .nested-counter li::before {
+            content: counter(topic) "." counter(subtopic) " ";
+            /* Display the nested counter */
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter">
+        <h2>Introduction</h2>
+        <h2>Overview</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <div class="nested-counter">
+            <h2>Topics</h2>
+            <ul>
+                <li>HTML Basics</li>
+                <li>CSS Fundamentals</li>
+                <li>JavaScript Essentials</li>
+            </ul>
+        </div>
+        <h2>Conclusion</h2>
+
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <div class="nested-counter">
+            <h2>Topics</h2>
+            <ul>
+                <li>HTML Basics</li>
+                <li>CSS Fundamentals</li>
+                <li>JavaScript Essentials</li>
+            </ul>
+        </div>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+        <h2>Conclusion</h2>
+
+    </div>
+
+
+</body>
+
+</html>
