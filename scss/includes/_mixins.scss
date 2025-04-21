@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin buttonStyles($bgColor, $fontSize) {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: $bgColor;
+    font-size: $fontSize;
+    color: white;
+    margin: 10px 0;
+
+    &:hover {
+        background-color: black;
+    }
+
+    &:focus {
+        outline: 2px dotted purple;
+    }
+}

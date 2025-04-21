@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="showDate">here to show greeting</div>
+    <button id="mybtn" onclick="clickBtn()">Click
+        here</button>
+    <button onclick="document.write('Hello Js')">Write Something</button>
+    <button onclick="console.log('Hello from js')">Print something on console</button>
+
+    <!-- <button></button> -->
+
+    <!-- we invoke the function to execute that function -->
+    <!-- We can also say "Function Call" -->
+    <script>
+        function clickBtn() {
+            // let greeting = "Namaste"
+            document.getElementById('showDate').innerHTML = Date();
+            // document.getElementById('mybtn').style.backgroundColor = 'red';
+            // document.getElementById('showDate').style.fontSize = '60px'
+            // // console.log(greeting + ", " + "Kelsang")
+            // console.log(`Kelsang jee ${greeting}`)
+        }
+    </script>
+    <script src="./alert.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="myPInput" type="password" placeholder="Enter your password">
+    <button id="myBtn">Show Password</button>
+    <script>
+        let btn = document.getElementById('myBtn');
+        let myInput = document.getElementById('myPInput');
+        btn.addEventListener('click', function () {
+            myInput.attributes['type'].value = 'text'
+            myInput.style.display = "none"
+        })
+        console.dir(myInput)
+    </script>
+</body>
+
+</html>

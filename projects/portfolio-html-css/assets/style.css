@@ -111,8 +111,6 @@ header .action {
     align-items: center;
 }
 
-
-
 @media screen and (min-width:768px) {
     header .action .toggle {
         display: none;

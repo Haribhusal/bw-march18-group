@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 16px;
+  color: white;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: black;
+}
+
+button:focus {
+  outline: 2px dotted purple;
+}
+
+header button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: green;
+  font-size: 10px;
+  color: white;
+  margin: 10px 0;
+}
+
+header button:hover {
+  background-color: black;
+}
+
+header button:focus {
+  outline: 2px dotted purple;
+}
+
+footer button {
+  border: 5px solid black;
+}
+
+header nav {
+  background-color: yellow;
+}
+
+header nav ul {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-left: 2px solid red;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+header nav ul li a {
+  color: red;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+header nav ul li:last-child {
+  background-color: red;
+  border-radius: 10px;
+}
+
+header nav ul li:last-child a {
+  color: white;
+}
+
+header nav ul li:hover {
+  background-color: red;
+}
+
+header nav ul li:hover a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

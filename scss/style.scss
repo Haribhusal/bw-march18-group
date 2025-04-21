@@ -1,0 +1,65 @@
+@import './includes/variables';
+@import './includes/reset';
+@import './includes/mixins';
+
+
+button {
+    @include buttonStyles(red, 16px);
+}
+
+header {
+    button {
+        @include buttonStyles(green, 10px);
+    }
+}
+
+footer {
+    button {
+        border: 5px solid black;
+    }
+}
+
+header {
+    nav {
+        background-color: yellow;
+
+        ul {
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-left: 2px solid red;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                a {
+                    color: red;
+                    display: block;
+                    padding: 10px;
+                    text-decoration: none;
+                }
+
+                &:last-child {
+                    background-color: red;
+                    border-radius: $borderRadius;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                &:hover {
+                    background-color: red;
+
+                    a {
+                        color: white;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
