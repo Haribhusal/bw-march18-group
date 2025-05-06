@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .car {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: red;
+            padding: 10px;
+            border: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="score"></h1>
+
+    <div id="myCar" class="car"></div>
+    <div class="controls">
+        <button id="moveX">X+</button>
+        <button id="moveY">Y+</button>
+        <button id="moveXNegative">X-</button>
+        <button id="moveYNegative">Y-</button>
+    </div>
+
+
+    <script>
+
+        let xMove = document.getElementById('moveX');
+        let yMove = document.getElementById('moveY');
+        let yNegative = document.getElementById('moveYNegative');
+        let xNegative = document.getElementById('moveXNegative');
+        let carElement = document.getElementById('myCar');
+
+        let score = document.getElementById('score');
+
+        const car = {
+            xPosition: 0,
+            yPosition: 0,
+            isMoving: false,
+            score: {
+                currentScore: 2300,
+                highestScore: 5000
+            },
+            moveX: function (xDistance) {
+                this.xPosition += xDistance
+            },
+            moveY: function (yDistance) {
+                this.yPosition += yDistance
+            }
+        }
+
+        function updatePosition() {
+            carElement.style.left = `${car.xPosition}px`;
+            carElement.style.top = `${car.yPosition}px`;
+        }
+        xMove.addEventListener('click', function () {
+            car.moveX(100)
+            updatePosition();
+
+        })
+        yMove.addEventListener('click', function () {
+            car.moveY(100)
+            updatePosition();
+
+        })
+
+        yNegative.addEventListener('click', function () {
+            car.moveY(-100)
+            updatePosition();
+
+        })
+
+        xNegative.addEventListener('click', function () {
+            car.moveX(-100)
+            updatePosition();
+
+        })
+
+        // score.innerText = car.score.currentScore
+        score.innerText = car['score']['currentScore']
+        // console.log(car.score.currentScore)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <h1 id="message"></h1>
+
+    <form onsubmit="handleSubmit(event)">
+        <input id="timeSelector" type="text" placeholder="Enter time">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            // let date = new Date();
+            let s = document.getElementById('timeSelector');
+            let m = document.getElementById('message');
+            let value = s.value;
+            m.innerHTML = value
+            console.log(value)
+            if (value > 12) {
+                m.innerHTML = "Good Afternoon"
+            } else {
+                m.innerHTML = "Good Morning"
+            }
+        }
+    </script>
+</body>
+
+</html>
