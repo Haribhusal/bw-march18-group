@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="test" class="content">
+        <!-- Inserts here if you use insertBefore -->
+        <div class="already"></div>
+    </div>
+    <script>
+
+        // let contentWrapper = document.querySelectorAll('.content')
+        let contentWrapper1 = document.querySelector('.content')
+        let previous = document.querySelector('.already')
+        // console.log(contentWrapper)
+        // let contentWrapper = document.getElementById('test')
+        // document.createElement('h1').innerText = "I am created from js"
+        let createdHeading = document.createElement('h1')
+        createdHeading.innerText = "I am created from js"
+        // contentWrapper1.appendChild(createdHeading)
+        contentWrapper1.insertBefore(createdHeading, previous)
+        // contentWrapper[0].appendChild(createdHeading)
+    </script>
+</body>
+
+</html>

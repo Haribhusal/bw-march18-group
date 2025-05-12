@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            background-color: red;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header class="">
+        <h1 class="heading">Logo</h1>
+    </header>
+
+
+
+    <main>
+
+        <form action="">
+            <input type="password" placeholder="Enter your password">
+            <div id="showMessage"></div>
+        </form>
+        <button id="showPassword">Show Password</button>
+
+        <section>
+            <h3 class="heading">About us</h3>
+        </section>
+        <section>section 1</section>
+        <section>section 2</section>
+        <section>section 3</section>
+        <section>section 4</section>
+        <section>section 5</section>
+        <section>section 6</section>
+        <section>section 7</section>
+        <section>section 8</section>
+        <section>section 9</section>
+        <section>section 10</section>
+    </main>
+
+    <footer>
+        <div class="brand">
+            <h5 class="heading">
+                Footer
+            </h5>
+        </div>
+    </footer>
+
+
+    <div id="demo" class="hello hello2" style="background-color: red;"></div>
+    <script>
+
+        let showMessageBox = document.getElementById('showMessage');
+
+        let showPasswordButton = document.getElementById('showPassword');
+
+        showPasswordButton.addEventListener('click', function () {
+            let myPasswordInput = document.querySelector('form input')
+
+            let regEx = /^(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?=.*\d).+$/
+            let userEnteredPassword = myPasswordInput.value;
+            let satisfies = regEx.test(userEnteredPassword)
+            if (satisfies) {
+                showMessageBox.innerText = "You can use this password"
+                showMessageBox.style.color = "green"
+            } else {
+                showMessageBox.innerText = "You can not use this password"
+                showMessageBox.style.color = "red"
+            }
+            // console.dir(myPasswordInput)
+            myPasswordInput.attributes[0].value = "text"
+        })
+
+
+        // let myId = document.getElementById('demo')
+        let mysections = document.getElementsByTagName('section')
+        // console.dir(mysections)
+        let sectionArray = Array.from(mysections);
+        console.log(sectionArray)
+        sectionArray.forEach((sectionItem) => {
+            sectionItem.addEventListener('click', function () {
+                console.log("User has selected ", sectionItem.innerText)
+                sectionItem.style.backgroundColor = 'green'
+            })
+        })
+        // console.dir(myId)
+        // myId.innerText = "Hello, I am created from js"
+        // myId.innerHTML = '<h1>I am heading 1 from js</h1>'
+
+
+        let headings = document.getElementsByClassName('heading');
+        console.dir(headings);
+    </script>
+
+</body>
+
+</html>

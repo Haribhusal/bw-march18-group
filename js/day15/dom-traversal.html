@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div id="parent">
+            <p id="firstChild">First Child</p>
+            <p id="secondChild">Second Child</p>
+            <p id="thirdChild">Third Child</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Select the parent element
+        const parent = document.getElementById('parent');
+
+        // Accessing the parent node
+        // console.log('Parent Node:', parent.parentNode); // Should log the body or the parent of the div
+
+        // Accessing child nodes
+        const childNodes = parent.childNodes; // This includes all child nodes (text nodes, elements, etc.)
+        // console.log('Child Nodes:', childNodes);
+
+        // Accessing the first child
+        const firstChild = parent.firstChild; // This may include text nodes (whitespace)
+        console.log('First Child:', firstChild);
+
+        // Accessing the last child
+        const lastChild = parent.lastChild; // This may include text nodes (whitespace)
+        // console.log('Last Child:', lastChild);
+
+        // Accessing the first element child
+        const firstElementChild = parent.firstElementChild; // This will only return the first <p> element
+        // console.log('First Element Child:', firstElementChild);
+
+        // Accessing the last element child
+        const lastElementChild = parent.lastElementChild; // This will only return the last <p> element
+        // console.log('Last Element Child:', lastElementChild);
+
+        // Accessing the next sibling of the first child
+        const nextSibling = firstElementChild.nextSibling; // This may include text nodes (whitespace)
+        // console.log('Next Sibling of First Child:', nextSibling);
+
+        // Accessing the previous sibling of the second child
+        const secondChild = document.getElementById('secondChild');
+        const previousSibling = secondChild.previousSibling; // This may include text nodes (whitespace)
+        // console.log('Previous Sibling of Second Child:', previousSibling);
+
+        // Accessing the next element sibling of the first child
+        const nextElementSibling = firstElementChild.nextElementSibling; // This will return the second <p> element
+        // console.log('Next Element Sibling of First Child:', nextElementSibling);
+
+        // Accessing the previous element sibling of the second child
+        const previousElementSibling = secondChild.previousElementSibling; // This will return the first <p> element
+        // console.log('Previous Element Sibling of Second Child:', previousElementSibling);
+    </script>
+</body>
+
+</html>
