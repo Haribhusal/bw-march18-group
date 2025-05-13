@@ -47,13 +47,9 @@ myform.onsubmit = function (event) {
         if (newValue !== null) {
             createdP.innerText = newValue;
         }
-
     }
-
-
     wrapper.appendChild(deleteBtn)
     wrapper.appendChild(editBtn)
-
     createdLi.appendChild(wrapper)
 
 
