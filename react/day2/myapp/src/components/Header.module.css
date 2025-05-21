@@ -1,0 +1,23 @@
+.myHeader {
+    background-color: red;
+    display: flex;
+    padding: 20px 7%;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}

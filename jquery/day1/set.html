@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="https://google.com" id="w3s">Go to w3schools</a>
+
+    <button>Set Link</button>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        $("button").click(function () {
+            console.log($("#w3s").attr("href"))
+        });
+    </script>
+</body>
+
+</html>

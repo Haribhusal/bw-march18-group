@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <button>Animate</button>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+
+        $('button').click(function () {
+            // $('.box').slideUp("fast")
+            // $('.box').animate({ left: '200px', top: "0px" }, 'fast', function () {
+            //     console.log("My fast animation completed")
+            //     $('button').hide();
+            // })
+            // $('.box').animate({ left: "200px" }).slideUp(3000).slideDown(2000).fadeOut('fast');
+            // $('.box').html('<h1>This is heading created from JS/JQUERY</h1>')
+        })
+
+    </script>
+</body>
+
+</html>

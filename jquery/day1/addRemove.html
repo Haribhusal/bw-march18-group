@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 60%;
+            margin: 0 auto;
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        .selected {
+            background-color: red;
+        }
+
+        .active {
+            transform: scale(2);
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p>hello p</p>
+
+    <form>
+        <label class="boxes ">
+            <input type="checkbox">
+            <div class="box">I like Apple</div>
+        </label>
+
+        <label class="boxes ">
+            <input type="checkbox">
+            <div class="box">I like Apple</div>
+        </label>
+
+        <label class="boxes ">
+            <input type="checkbox">
+            <div class="box">I like Apple</div>
+        </label>
+        <label class="boxes ">
+            <input type="checkbox">
+            <div class="box">I like Apple</div>
+        </label>
+    </form>
+
+    <img src="https://picsum.photos/id/45/500/400" alt="">
+    <img src="https://picsum.photos/id/46/500/400" alt="">
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+
+        // $('label').click(function () {
+        //     $(this).addClass('selected')
+        // })
+
+        $('img').click(function () {
+            $(this).toggleClass('active')
+        })
+
+
+
+        $('label').on('click', function () {
+            $(this).toggleClass('hey');
+        })
+
+        // $("p").on("click", function () {
+        //     $(this).toggleClass("highlight");
+        // });
+
+    </script>
+</body>
+
+</html>

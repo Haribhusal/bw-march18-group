@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./owl.carousel.min.css">
+  <link rel="stylesheet" href="./owl.theme.default.min.css">
+
+  <style>
+    .imageSlider {
+      position: relative;
+    }
+
+    .imageSlider .owl-prev {
+      position: absolute;
+      top: 50%;
+      height: 50px;
+      width: 50px;
+      left: 15px;
+      background-color: white !important;
+      z-index: 99;
+      transform: translateY(-50%);
+    }
+
+    .imageSlider .owl-next {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      height: 50px;
+      width: 50px;
+      background-color: white !important;
+      z-index: 99;
+      transform: translateY(-50%);
+    }
+
+    .imageSlider .owl-dots {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .imageSlider .owl-dot {
+      height: 16px;
+      width: 16px;
+      border-radius: 8px;
+      background-color: red !important;
+    }
+
+    .imageSlider .owl-dot.active {
+      background-color: green !important;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="imageSlider">
+    <div class="images owl-carousel">
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/52/500/400" alt="">
+      </div>
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/53/500/400" alt="">
+      </div>
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/54/500/400" alt="">
+      </div>
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/55/500/400" alt="">
+      </div>
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/56/500/400" alt="">
+      </div>
+      <div class="imageBox">
+        <img src="https://picsum.photos/id/57/500/400" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        loop: true,
+        items: 4,
+        nav: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: false
+          },
+          1000: {
+            items: 5,
+            nav: true,
+            loop: false
+          }
+        }
+
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
