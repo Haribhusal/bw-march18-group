@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+button {
+    @apply px-5 py-3 rounded-md shadow bg-gray-900 text-white hover:bg-gray-700 cursor-pointer
+}
+
+.pay_btn {
+    @apply px-5 py-3 rounded-md shadow bg-white text-gray-900 hover:bg-gray-200 cursor-pointer
+}
+
+.slick-dots {
+    margin-top: 30px !important;
+    bottom: -60px !important;
+}
+
+.slick-dots li button::before {
+    display: none;
+}
+
+.slick-dots li button {
+    height: 5px !important;
+    width: 15px !important;
+    background-color: rgb(198, 198, 198) !important;
+}
+
+.slick-dots li.slick-active button {
+    height: 5px !important;
+    width: 25px !important;
+    background-color: orange !important;
+}
